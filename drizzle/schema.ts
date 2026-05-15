@@ -25,4 +25,23 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+/**
+ * 인터넷 가입 신청 (DB 게더링) 데이터.
+ * 통신사(carrier)별로 SK/LG 신청을 모두 한 테이블에 저장한다.
+ */
+export const leads = mysqlTable("leads", {
+  id: int("id").autoincrement().primaryKey(),
+  carrier: mysqlEnum("carrier", ["SK", "LG"]).notNull(),
+  name: varchar("name", { length: 64 }).notNull(),
+  phone: varchar("phone", { length: 32 }).notNull(),
+  address: varchar("address", { length: 255 }).notNull(),
+  plan: varchar("plan", { length: 64 }).notNull(),
+  installDate: varchar("installDate", { length: 32 }).notNull(),
+  status: mysqlEnum("status", ["대기", "연락완료", "계약완료"]).default("대기").notNull(),
+  memo: text("memo"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Lead = typeof leads.$inferSelect;
+export type InsertLead = typeof leads.$inferInsert;
