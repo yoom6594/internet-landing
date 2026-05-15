@@ -1,4 +1,4 @@
-name: Deploy Next.js/Vite site to Pages
+name: Deploy site to Pages
 
 on:
   push:
@@ -21,8 +21,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
-          cache-dependency-path: 'client/package-lock.json'
 
       - name: Install dependencies
         run: npm install
@@ -38,7 +36,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # 빌드 결과물이 저장되는 폴더명입니다. 보통 dist입니다.
+          # 빌드 결과물이 저장되는 폴더입니다.
+          # 만약 실패하면 나중에 이 부분을 './client/build'로 수정해볼게요.
           path: './client/dist'
 
       - name: Deploy to GitHub Pages
