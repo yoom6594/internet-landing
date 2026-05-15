@@ -1,0 +1,43 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [
+    "server",
+    "db",
+    "user"
+  ],
+  "dev_command": "pnpm run dev",
+  "env_vars": {
+    "DATABASE_URL": "mysql://zzA5MrerqkpewB9.root:f1ZrQK0jAPH48q27cLjY@gateway06.us-east-1.prod.aws.tidbcloud.com:4000/9pykiAXAxtqS9UZnuqGbES?ssl={\"rejectUnauthorized\":true}"
+  },
+  "experiments": [
+    "no_db_push"
+  ],
+  "git_remote": {
+    "repo_url": "s3://vida-prod-gitrepo/webdev-git/310519663580844259/9pykiAXAxtqS9UZnuqGbES",
+    "access_key_id": "ASIAZV3A2ECZASSVJZS7",
+    "secret_access_key": "PcnFCUnCtdROWMnF+twHbmvW9LkCnBdjEaD695FF",
+    "session_token": "IQoJb3JpZ2luX2VjEKT//////////wEaCXVzLWVhc3QtMSJHMEUCIB6/Dpx2J7wLidNdJBosKgBjl+ma9eeRoHVvIlBP9JFQAiEAvtsfpBr4JLhCawcvownzQwVValfBzJw5kwOWTi/RpsIq9gMIbBAEGgw2NjUzODYwOTg4NjYiDERkWLk28VrZpNHjGirTA8MESyjKJTpHhs9AWXtnNYvm+69nhKU4agrldX0m8vsBcGUQ5wCDfT5opcDcrj9XfJAQT6Q9iCsFJKEX3pFE434cOIYyAk6CXBLlULzmuEw/0Ot12ostyqgzwkPm1fhGo0RxNtqe1ih74csWViKVklV6jHmh6v6ktSk6oZ810EruCIxINU2bO5Q/nasIvsKHRtc+1ldeb7u3iiY+mt1MeOrZB/dMlLR6El87DFV+k36Werkcm7x1fVq6uzm8DGGQsJi+28jqBN+0E+FUyeGlC71gxnPYb+FGNO983SapKpgzQv8WBnrf4n9Tk4weZwElooUsYX/iZh6sTLVv9cs/+HePzoPkt/UhrzeMXJIlXRk8a3QiFWJw9jsZlBVB7S3XFIdL5lVCPvbvv4jLm8Ag1999QrSHmQdUldf8hUZ1OZ/vcnBFippsQ7vYAcdptJQJNAySvMzVumz9QAHuYGIHAstwqrAG+S5Lhv6KxKW3+WO2tF1rYIuvEQx2HndlFBiaAXjaNVES/Zbn1otXtudSaFfeuK0I5Sjatrk/N0dUMk/v9Db0Uf0dvyvzoKHivbQmqHVTLGsyrgqyCESbP9r19JiolxUEF2GnsrZRcsmAo8Izp9y/MIedmtAGOp0BuDsDh+XeZazn3qNHxVLaDs2AgSc4fhP/KCj+ElPKct1QvJOxfsvwrstwgzSxk2sw6fH5/u1BkWWllbNe8dsSXLRJyLwR11G2MOBh3Uy++V374eMGk7qHPgaiza2wh0o00lYCr7Il0VCbjCfVvmNfUPmktw6fdV45gSyokRuz45H0dvZqgKgKideR2JfmwEYetyV3YHqWHlL0xDU39A==",
+    "expiration": "2026-05-15T15:09:59.000Z"
+  },
+  "name": "internet-landing",
+  "path": "/home/ubuntu/internet-landing",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "iiYiG5awefGvuh2LHf6xDr",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "2CTLMvQZBp3ULpk7XsNZLV",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "Minjeong Yoon",
+    "OWNER_OPEN_ID": "QaxJfgFYq6ik7BeeK8Bge9",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "e1522c4e-173a-45e0-8b14-e5034443f089",
+    "VITE_APP_ID": "9pykiAXAxtqS9UZnuqGbES",
+    "VITE_APP_LOGO": "",
+    "VITE_APP_TITLE": "인터넷 가입 신청 랜딩페이지",
+    "VITE_FRONTEND_FORGE_API_KEY": "CdbtaKr7gJpBxSYMowupzo",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-db-user",
+  "test_command": "pnpm test"
+}
