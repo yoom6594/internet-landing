@@ -23,18 +23,24 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
+        # root가 아닌 client 폴더 내부의 package.json을 기준으로 설치합니다.
         run: npm install --force
+        working-directory: ./client
 
       - name: Build project
-        run: CI=false npx vite build
-
+        # 설정을 무시하고 client 폴더의 index.html을 강제로 빌드합니다.
+        run: |
+          cd client
+          CI=false npx vite build --base=/internet-landing/
+        
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # 파일을 밖으로 꺼냈으므로 경로가 단순해집니다.
+          # 빌드 결과물이 생성되는 정확한 경로입니다.
+          path: './client/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
